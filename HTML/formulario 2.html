@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Página</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .highlight {
+      color: rgb(255, 0, 64);
+      font-size: 22px;
+    }
+  </style><style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      border-radius: 0 0 10px 10px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+    }
+
+    .nav-link:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px 0;
+      background-color: #333;
+      color: white;
+      border-radius: 10px 10px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1 id="header-title">Formulario de Contacto</h1>
+  </header>
+
+  <main class="form-container">
+    <form class="contact-form" id="contact-form">
+      <h2 class="form-title">Envíanos tu Mensaje</h2>
+
+      <div class="form-group">
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="Ingresa tu correo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject" class="form-label">Asunto:</label>
+        <input type="text" id="subject" name="subject" class="form-input" placeholder="Ingresa el asunto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="form-label">Mensaje:</label>
+        <textarea id="message" name="message" class="form-textarea" placeholder="Escribe tu mensaje" required></textarea>
+      </div>
+
+      <button type="submit" id="submit-button" class="btn btn-submit">Enviar</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      let nombre = document.getElementById('name').value;
+      if (nombre.trim() === "") {
+        alert('Por favor, escriba su nombre');
+        event.preventDefault(); // Evita el envío del formulario
+      }
+    });
+
+    // Función para cambiar estilos al hacer clic
+    function toggleHighlight(event) {
+      event.target.classList.toggle('highlight');
+    }
+
+    // Aplicar evento de clic a los elementos 
+    document.getElementById('header-title').addEventListener('click', toggleHighlight);
+    document.querySelectorAll('.form-label, .footer-text').forEach(label => {
+      label.addEventListener('click', toggleHighlight);
+    });
+  </script>
+<form id="mi formulario">
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <button type="submit">Enviar</button>
+  </form>
+  <script>
+    document.getElementById ('mi formulario').addEventListener('submit', function(event){
+      let nombre= document.getElementById ('nombre').value;
+      if (nombre===""){
+        alert ('Porfavor, escribe tu nombre.');
+        event.preventDefault (); // Evita el envio del formulario.
+      }
+    });
+    </script>
+ <script>
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ñ' || event.key === 'Ñ') {
+        document.body.style.backgroundColor = 'blue';
+      }
+    });
+    </script>
+ <footer id="footer">
+    <p class="footer-text">Página web creada por Oscar y José Luis</p>
+</body>
+</html>
